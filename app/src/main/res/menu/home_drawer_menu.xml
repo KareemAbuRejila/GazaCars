@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_profile"
+        android:title="@string/profile" />
+    <item
+        android:id="@+id/navigation_favourite"
+        android:icon="@drawable/ic_star"
+        android:title="@string/favourite" />
+
+
+    <item
+        android:id="@+id/navigation_setting"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/setting"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/navigation_about_us"
+        android:icon="@drawable/ic_conditions"
+        android:title="@string/about_us" />
+    <item
+        android:id="@+id/navigation_contact_us"
+        android:icon="@drawable/ic_contactus"
+        android:title="@string/contact_us" />
+    <item
+        android:id="@+id/navigation_conditions_and_privacy"
+        android:icon="@drawable/ic_privacy"
+        android:title="@string/conditions_38_privacy" />
+
+    <item
+        android:id="@+id/navigation_share_app"
+        android:icon="@drawable/ic_baseline_share_24"
+        android:title="@string/share_this_app" />
+    <item
+        android:id="@+id/navigation_logout"
+        android:icon="@drawable/ic_log_out"
+        android:title="@string/logout" />
+
+</menu>

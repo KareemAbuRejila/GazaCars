@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_bg"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:elevation="0dp"
+            android:backgroundTint="@color/main_bg">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/filter_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:backgroundTint="@color/main_bg"
+                android:minHeight="?actionBarSize"
+                app:navigationIcon="@drawable/ic_baseline_close_24"
+                app:title="Filter" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <FrameLayout
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/padding_main"
+                    android:paddingBottom="50dp">
+
+                    <TextView
+                        android:id="@+id/brand"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/padding_main"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="@dimen/padding_main"
+                        android:text="@string/brand"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/c_b"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="@dimen/cardview_spinner_radius"
+                        app:cardElevation="5dp"
+                        app:cardUseCompatPadding="true"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintTop_toBottomOf="@+id/brand"
+                        app:layout_constraintStart_toStartOf="@id/brand"
+                        app:layout_constraintEnd_toEndOf="@id/brand"
+                        tools:layout_editor_absoluteX="8dp">
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spinner_c_b"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:entries="@array/carBrands"
+                            android:padding="8dp"
+                            android:spinnerMode="dropdown" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/c_m"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="@dimen/cardview_spinner_radius"
+                        app:cardElevation="5dp"
+                        app:cardUseCompatPadding="true"
+                        tools:layout_editor_absoluteX="8dp"
+                        tools:layout_editor_absoluteY="16dp"
+                        app:layout_constraintTop_toBottomOf="@+id/c_b"
+                        app:layout_constraintStart_toStartOf="@id/c_b"
+                        app:layout_constraintEnd_toEndOf="@id/c_b">
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spinner_c_m"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:entries="@array/models"
+                            android:padding="8dp"
+                            android:spinnerMode="dropdown"
+                            />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <View
+                        android:id="@+id/v1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/line_width"
+                        android:background="@color/grayStroke"
+                        tools:layout_editor_absoluteY="16dp"
+                        app:layout_constraintTop_toBottomOf="@+id/c_m"
+                        app:layout_constraintStart_toStartOf="@id/c_m"
+                        app:layout_constraintEnd_toEndOf="@id/c_m" />
+
+                    <TextView
+                        android:id="@+id/g_t"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/ger_type"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                        app:layout_constraintEnd_toEndOf="@id/c_m"
+                        app:layout_constraintStart_toStartOf="@id/c_m"
+                        app:layout_constraintTop_toBottomOf="@+id/c_m" />
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/filter_check_automatic"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/automatic"
+                        app:layout_constraintTop_toBottomOf="@+id/g_t"
+                        app:layout_constraintStart_toStartOf="@id/g_t"
+                        app:layout_constraintEnd_toEndOf="@id/g_t" />
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/filter_check_ger"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ger"
+                        app:layout_constraintTop_toBottomOf="@+id/filter_check_automatic"
+                        app:layout_constraintStart_toStartOf="@id/filter_check_automatic"
+                        app:layout_constraintEnd_toEndOf="@id/filter_check_automatic" />
+
+                    <View
+                        android:id="@+id/v2"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/line_width"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/grayStroke"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/filter_check_ger" />
+
+                    <TextView
+                        android:id="@+id/trm"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/trim"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                        app:layout_constraintEnd_toEndOf="@id/c_m"
+                        app:layout_constraintStart_toStartOf="@id/c_m"
+                        app:layout_constraintTop_toBottomOf="@+id/v2" />
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/filter_check_t_family"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/family"
+                        app:layout_constraintTop_toBottomOf="@+id/trm"
+                        app:layout_constraintStart_toStartOf="@id/trm"
+                        app:layout_constraintEnd_toEndOf="@id/trm" />
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/filter_check_d_sport"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sport"
+                        app:layout_constraintTop_toBottomOf="@+id/filter_check_t_family"
+                        app:layout_constraintStart_toStartOf="@id/filter_check_t_family"
+                        app:layout_constraintEnd_toEndOf="@id/filter_check_t_family" />
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/filter_check_d_sedan"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sedan"
+                        app:layout_constraintTop_toBottomOf="@+id/filter_check_d_sport"
+                        app:layout_constraintStart_toStartOf="@id/filter_check_d_sport"
+                        app:layout_constraintEnd_toEndOf="@id/filter_check_d_sport" />
+
+                    <View
+                        android:id="@+id/v3"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/line_width"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/grayStroke"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/filter_check_d_sedan" />
+
+                    <TextView
+                        android:id="@+id/status"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/number_of_doors"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                        app:layout_constraintEnd_toEndOf="@id/c_m"
+                        app:layout_constraintStart_toStartOf="@id/c_m"
+                        app:layout_constraintTop_toBottomOf="@+id/v3"
+                        android:layout_marginTop="10dp" />
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/filter_check_s_excellent"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/excellent"
+                        app:layout_constraintTop_toBottomOf="@+id/status"
+                        app:layout_constraintStart_toStartOf="@id/status"
+                        app:layout_constraintEnd_toEndOf="@id/status" />
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/filter_check_s_very_good"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/very_good"
+                        app:layout_constraintTop_toBottomOf="@+id/filter_check_s_excellent"
+                        app:layout_constraintStart_toStartOf="@id/filter_check_s_excellent"
+                        app:layout_constraintEnd_toEndOf="@id/filter_check_s_excellent" />
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/filter_check_s_good"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/good"
+                        app:layout_constraintTop_toBottomOf="@+id/filter_check_s_very_good"
+                        app:layout_constraintStart_toStartOf="@id/filter_check_s_very_good"
+                        app:layout_constraintEnd_toEndOf="@id/filter_check_s_very_good" />
+
+                    <View
+                        android:id="@+id/v4"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/line_width"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/grayStroke"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/filter_check_s_good" />
+
+                    <TextView
+                        android:id="@+id/price"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/price_range"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                        app:layout_constraintEnd_toEndOf="@id/filter_check_s_good"
+                        app:layout_constraintStart_toStartOf="@id/filter_check_s_good"
+                        app:layout_constraintTop_toBottomOf="@+id/v4" />
+
+                    <com.google.android.material.slider.RangeSlider
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="@id/price"
+                        app:layout_constraintEnd_toEndOf="@id/price"
+                        app:layout_constraintTop_toBottomOf="@id/price"
+                        app:barrierDirection="start"
+                        app:chainUseRtl="true"
+                        android:valueFrom="0.0"
+                        android:valueTo="3000.0"
+                        android:stepSize="10.0"
+                        android:value="50"
+                        app:labelBehavior="floating"
+                        app:haloColor="@color/color_Secondary"
+                        app:thumbColor="@color/color_Primary"
+                        app:trackColor="@color/color_PrimaryVariant"
+                        app:tickColor="@color/color_Secondary"
+
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.core.widget.NestedScrollView>
+        </FrameLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

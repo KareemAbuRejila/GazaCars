@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_bg"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:elevation="0dp"
+            android:backgroundTint="@color/main_bg"
+
+            >
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/ver_code_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:backgroundTint="@color/main_bg"
+                android:minHeight="?actionBarSize"
+                app:title="@string/code_verification" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:padding="@dimen/padding_main">
+
+            <ImageView
+                android:id="@+id/img_forgot_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:src="@drawable/img_code_send"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Enter Code"
+                app:layout_constraintEnd_toEndOf="@+id/img_forgot_password"
+                app:layout_constraintStart_toStartOf="@+id/img_forgot_password"
+                app:layout_constraintTop_toBottomOf="@+id/img_forgot_password" />
+
+            <com.github.gongw.VerifyCodeView
+                android:id="@+id/ted"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="32dp"
+                android:outlineSpotShadowColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/img_forgot_password"
+                app:layout_constraintStart_toStartOf="@+id/img_forgot_password"
+                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                app:vcTextColor="#000"
+                app:vcWrapper="circle"
+                app:vcWrapperColor="@color/grayStroke"
+                app:vcWrapperStrokeWidth="0.3dp"
+
+                />
+
+            <Button
+                android:id="@+id/change_password_btn_confirm"
+                style="@style/main_button_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/confirm"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ted" />
+
+            <TextView
+                android:id="@+id/check_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="code unvalid, please check it!"
+                android:textColor="@android:color/holo_red_dark"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/change_password_btn_confirm"
+                app:layout_constraintTop_toBottomOf="@+id/change_password_btn_confirm" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

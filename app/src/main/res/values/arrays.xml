@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="trims">
+        <item>Trim</item>
+    </string-array>
+    <string-array name="types">
+        <item>Types</item>
+    </string-array>
+    <string-array name="statuses">
+        <item>Status</item>
+    </string-array>
+    <string-array name="financial_statuses">
+        <item>Financial Status</item>
+    </string-array>
+    <string-array name="carBrands">
+        <item>Car Brand</item>
+    </string-array>
+    <string-array name="models">
+        <item>Model</item>
+    </string-array>
+</resources>

@@ -1,0 +1,141 @@
+<resources>
+    <string name="app_name">Gaza Cars</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="skip">Skip</string>
+    <string name="create_new_account">Create new account</string>
+    <string name="you_can_login_with">You can login with</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <!-- Strings used for fragments for navigation -->
+
+    <string name="hello_first_fragment" translatable="false">Hello first fragment</string>
+    <string name="hello_second_fragment" translatable="false">Hello second fragment. Arg: %1$s</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="gaza_cars" translatable="false">Gaza Cars</string>
+    <string name="don_t_have_account_yet">Don\'t have account yet?</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="home">Home</string>
+    <string name="have_account">Have account</string>
+    <string name="back_to_login">Back to login</string>
+    <string name="you_can_register_with">You can register with</string>
+    <string name="title_activity_home_activity">HomeActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_cars">Cars</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="nav_header_title" translatable="false">Android Studio</string>
+    <string name="nav_header_subtitle" translatable="false">android.studio@android.com</string>
+    <string name="nav_header_desc" translatable="false">Navigation header</string>
+    <string name="action_settings" translatable="false">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery" translatable="false">Gallery</string>
+    <string name="menu_slideshow" translatable="false">Slideshow</string>
+    <string name="main">Main</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="title_more">More</string>
+    <string name="popular">Popular</string>
+    <string name="contracted">Contracted</string>
+    <string name="search">Search</string>
+    <string name="dash">/</string>
+    <string name="model">Model</string>
+    <string name="brand">Brand</string>
+    <string name="title_add">ADD</string>
+    <string name="profile">Profile</string>
+    <string name="my_gallery">My Gallery</string>
+    <string name="release_date">Release Date</string>
+    <string name="next">Next</string>
+    <string name="distance">Distance</string>
+    <string name="key_words">Key Words</string>
+    <string name="details_optional">Details (optional)</string>
+    <string name="latest">Latest</string>
+    <string name="introimg" translatable="false">GazaCarsIntroImg</string>
+    <string name="finsh">Finsh</string>
+    <string name="book">Book</string>
+    <string name="favourite">Favourite</string>
+    <string name="setting">Setting</string>
+    <string name="about_us">About Us</string>
+    <string name="conditions">Conditions</string>
+    <string name="privacy">Privacy</string>
+    <string name="logout">Logout</string>
+    <string name="personal_name">Personal Name</string>
+    <string name="contact_us">Contact us</string>
+    <string name="state">State</string>
+    <string name="gaza">Gaza</string>
+    <string name="work">Work</string>
+    <string name="developer">Developer</string>
+    <string name="phone">Phone</string>
+    <string name="email">Email</string>
+    <string name="conditions_38_privacy"><![CDATA[Conditions & Privacy]]></string>
+    <string name="share_this_app">Share this app</string>
+    <string name="brandAndModel">Brand \\ Model</string>
+    <string name="forgot_passowrd">Forgot Password</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="enter_your_e_mail_address_and_we_ll_send_you_an_e_mail_telling_you_how_to_recover_it">Enter your e-mail address and we\'ll send you an e-mail telling you how to recover it</string>
+    <string name="send">Send</string>
+    <string name="before">Before</string>
+    <string name="sent_done">Sent done</string>
+    <string name="please_check_yout_email">Please check your email to reset your password</string>
+    <string name="ok">Ok</string>
+    <string name="dontanotherimage">You don\'t another images for this car</string>
+    <string name="seller_name">Seller Name</string>
+    <string name="price">Price</string>
+    <string name="my_sales">My Sales</string>
+    <string name="my_purchases">My Purchases</string>
+    <string name="change_password">Change Password</string>
+    <string name="full_name">Full Name</string>
+    <string name="current_password">Current Password</string>
+    <string name="new_password">New password</string>
+    <string name="confirm_new_password">Confirm New Password</string>
+    <string name="confirm">Confirm</string>
+    <string name="confirm_done">Confirm Done</string>
+    <string name="message_details">Message Details</string>
+    <string name="enable_notifications">Enable Notifications</string>
+    <string name="code_verification">Code Verification</string>
+    <string name="ger_type">Ger Type</string>
+    <string name="automatic">Automatic</string>
+    <string name="ger">Ger</string>
+    <string name="number_of_doors">Number of doors</string>
+    <string name="two">Two</string>
+    <string name="sedan">Sedan</string>
+    <string name="excellent">Excellent</string>
+    <string name="very_good">Very Good</string>
+    <string name="good">Good</string>
+    <string name="price_range">Price Range</string>
+    <string name="trim">Trim</string>
+    <string name="sport">Sport</string>
+    <string name="family">Family</string>
+
+    <string-array name="releaseDates">
+        <item>@string/release_date</item>
+        <item>1999</item>
+        <item>2000</item>
+        <item>2001</item>
+        <item>2002</item>
+        <item>2003</item>
+        <item>2004</item>
+        <item>2005</item>
+        <item>2006</item>
+        <item>2007</item>
+        <item>2008</item>
+        <item>2009</item>
+        <item>2010</item>
+        <item>2011</item>
+        <item>2012</item>
+        <item>2013</item>
+        <item>2014</item>
+        <item>2015</item>
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+    </string-array>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="ic_arrow_next" type="drawable">@drawable/ic_baseline_arrow_forward_24</item>
+    <item name="ic_arrow_back" type="drawable">@drawable/ic_baseline_arrow_left_24</item>
+
+</resources>

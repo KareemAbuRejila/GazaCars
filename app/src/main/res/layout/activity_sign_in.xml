@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_bg"
+        android:paddingStart="@dimen/padding_main"
+        android:paddingEnd="@dimen/padding_main"
+        tools:context=".ui.activities.SignInActivity">
+
+
+        <ImageView
+            android:id="@+id/img_splash_logo_login"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="150dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/tv_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Gaza Cars"
+            android:textSize="30dp"
+            android:fontFamily="@font/calist"
+            app:layout_constraintEnd_toEndOf="@+id/img_splash_logo_login"
+            app:layout_constraintStart_toStartOf="@+id/img_splash_logo_login"
+            app:layout_constraintTop_toBottomOf="@+id/img_splash_logo_login" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_login"
+            style="@style/main_button_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/login"
+            android:theme="@style/main_button_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_logo" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_reg"
+            style="@style/main_button_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/create_new_account"
+            android:theme="@style/main_button_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/you_can_login_with"
+            app:layout_constraintEnd_toEndOf="@+id/btn_reg"
+            app:layout_constraintStart_toStartOf="@+id/btn_reg"
+            app:layout_constraintTop_toBottomOf="@+id/btn_reg" />
+
+        <ImageView
+            android:id="@+id/ic_google"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_googleg_color_24dp" />
+
+        <ImageView
+            android:id="@+id/ic_facebook"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_facebook" />
+
+        <ImageView
+            android:id="@+id/ic_twitter"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_twitter" />
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:id="@+id/flow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:constraint_referenced_ids="ic_google,ic_twitter,ic_facebook"
+            app:flow_wrapMode="aligned"
+            app:layout_constraintBottom_toTopOf="@+id/tv_skip"
+            app:layout_constraintEnd_toEndOf="@+id/tv"
+            app:layout_constraintStart_toStartOf="@+id/tv"
+            app:layout_constraintTop_toBottomOf="@+id/tv" />
+
+        <TextView
+            android:id="@+id/tv_skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:text="@string/skip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/color_SecondaryVariant"
+            android:textStyle="bold"
+            android:drawableStart="@drawable/ic_baseline_arrow_forward_24"
+            android:drawableTint="@color/color_SecondaryVariant"
+            android:drawablePadding="5dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="carModel"
+            type="ps.aio.gazacars.models.CarModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/padding_main">
+
+            <TextView
+                android:id="@+id/tv_model_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{carModel.modelYear}"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/brand" />
+
+            <TextView
+                android:id="@+id/tv_car_brand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{carModel.brand+`\\`+carModel.model}"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                app:layout_constraintStart_toStartOf="@+id/tv_model_year"
+                app:layout_constraintTop_toBottomOf="@+id/tv_model_year"
+                tools:text="@string/brandAndModel" />
+
+            <TextView
+                android:id="@+id/tv_car_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{carModel.price.toString()+`$`}"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_car_brand"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_car_brand"
+                tools:text="100 $" />
+
+            <TextView
+                android:id="@+id/tv_car_images_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/grayStroke"
+                android:text="@{carModel.numberOfImages.toString()+`Images`}"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                app:drawableStartCompat="@drawable/ic_image"
+                app:layout_constraintStart_toStartOf="@+id/tv_car_brand"
+                app:layout_constraintTop_toBottomOf="@+id/tv_car_brand"
+                tools:text="5 Images" />
+
+            <TextView
+                android:id="@+id/tv_car_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{carModel.color+`Color`}"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_car_images_number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_car_images_number"
+                tools:text="Black" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tv_car_miles"
+                style="@style/Theme.GazaCars.detail_theme"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/grayStroke"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="@{carModel.mills.toString()+`Miles`}"
+                tools:layout_editor_absoluteX="271dp"
+                tools:layout_editor_absoluteY="140dp"
+                tools:text="100 Miles" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tv_car_type"
+                style="@style/Theme.GazaCars.detail_theme"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/grayStroke"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="@{carModel.mills.toString()+`Miles`}"
+                tools:layout_editor_absoluteX="128dp"
+                tools:layout_editor_absoluteY="140dp"
+                tools:text="Automatic" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tv_car_paided"
+                style="@style/Theme.GazaCars.detail_theme"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/grayStroke"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="@{carModel.mills.toString()+`Miles`}"
+                tools:layout_editor_absoluteX="35dp"
+                tools:layout_editor_absoluteY="140dp"
+                tools:text="Paid" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tv_car_status"
+                style="@style/Theme.GazaCars.detail_theme"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/grayStroke"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="@{carModel.status.toString()}"
+                tools:layout_editor_absoluteX="35dp"
+                tools:layout_editor_absoluteY="140dp"
+                tools:text="GOOD" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tv_car_doors"
+                style="@style/Theme.GazaCars.detail_theme"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/grayStroke"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="@{carModel.trimType.toString()+`Doors`}"
+                tools:layout_editor_absoluteX="35dp"
+                tools:layout_editor_absoluteY="140dp"
+                tools:text="Two" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tv_car_push_type"
+                style="@style/Theme.GazaCars.detail_theme"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/grayStroke"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="@{carModel.pushType.toString()+`Push`}"
+                tools:layout_editor_absoluteX="35dp"
+                tools:layout_editor_absoluteY="140dp"
+                tools:text="Push" />
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:id="@+id/flowProprates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:constraint_referenced_ids="tv_car_paided,tv_car_type,tv_car_miles,tv_car_push_type,tv_car_doors,tv_car_status"
+                app:flow_horizontalAlign="center"
+                app:flow_horizontalGap="5dp"
+                app:flow_horizontalStyle="spread_inside"
+                app:flow_maxElementsWrap="3"
+                app:flow_wrapMode="chain"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_car_images_number" />
+
+            <TextView
+                android:id="@+id/tv_car_details"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:lines="3"
+                android:text="@{carModel.details}"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_car_doors"
+                tools:text="Details" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

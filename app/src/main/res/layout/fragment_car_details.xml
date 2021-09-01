@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="carModel"
+            type="ps.aio.gazacars.models.CarModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        tools:context=".ui.fragments.car_details.CarDetailsFragment">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@color/white"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:fitsSystemWindows="true">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsingToolbarOfProfileProvider"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:collapsedTitleTextAppearance="@color/HeadText"
+                app:contentScrim="@color/white"
+                app:expandedTitleMarginStart="32dp"
+                app:expandedTitleTextAppearance="@color/HeadText"
+                app:layout_scrollFlags="exitUntilCollapsed|enterAlwaysCollapsed|scroll"
+                app:title="@{carModel.brand}"
+                app:titleEnabled="false">
+
+                <ImageView
+                    android:fitsSystemWindows="true"
+                    android:id="@+id/imgProfileProvider"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:setImgUrl="@{carModel.urlImage}"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <ImageView
+                    android:id="@+id/car_details_car_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/gradient_bg_image_car" />
+
+                <ImageView
+                    android:id="@+id/btn_add_wish_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="40dp"
+                    android:background="@drawable/bg_icon"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_heart_blank" />
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/toolbar_car_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:minHeight="?actionBarSize"
+                    app:layout_collapseMode="pin">
+
+                    <ImageButton
+                        android:id="@+id/btnBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_icon"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_arrow_back"
+                        android:visibility="visible"
+                        />
+                </com.google.android.material.appbar.MaterialToolbar>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <include
+            android:id="@+id/car_details_content_in"
+            layout="@layout/content_car_details" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:text="@string/book"
+            style="@style/main_button_1"
+             />
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

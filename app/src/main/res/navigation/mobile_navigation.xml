@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="ps.aio.gazacars.ui.fragments.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_cars"
+            app:destination="@id/navigation_cars" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_add"
+            app:destination="@id/navigation_add" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_notifications"
+            app:destination="@id/navigation_notifications" />
+        <action
+            android:id="@+id/action_navigation_home_to_popularFragment"
+            app:destination="@id/popularFragment"
+            app:enterAnim="@anim/slide_in_bottom"
+            app:exitAnim="@anim/slide_out_bottom"/>
+        <action
+            android:id="@+id/action_navigation_home_to_latestFragment"
+            app:destination="@id/latestFragment"
+            app:enterAnim="@anim/slide_in_bottom"
+            app:exitAnim="@anim/slide_out_bottom" />
+        <action
+            android:id="@+id/action_navigation_home_to_conFragment"
+            app:destination="@id/conFragment"
+            app:enterAnim="@anim/slide_in_bottom"
+            app:exitAnim="@anim/slide_out_bottom" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
+        <action
+            android:id="@+id/action_navigation_home_to_aboutUsFragment"
+            app:destination="@id/navigation_about_us" />
+        <action
+            android:id="@+id/action_navigation_home_to_favouriteFragment"
+            app:destination="@id/navigation_favourite" />
+        <action
+            android:id="@+id/action_navigation_home_to_contactUsFragment"
+            app:destination="@id/navigation_contact_us" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_cars"
+        android:name="ps.aio.gazacars.ui.fragments.cars.CarsFragment"
+        android:label="@string/title_cars"
+        tools:layout="@layout/fragment_cars" >
+        <action
+            android:id="@+id/action_navigation_cars_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_cars_to_navigation_add"
+            app:destination="@id/navigation_add" />
+        <action
+            android:id="@+id/action_navigation_cars_to_navigation_notifications"
+            app:destination="@id/navigation_notifications" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="ps.aio.gazacars.ui.fragments.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_add"
+        android:name="ps.aio.gazacars.ui.fragments.add.ADDFragment"
+        android:label="@string/title_add"
+        tools:layout="@layout/fragment_add" >
+        <action
+            android:id="@+id/action_navigation_add_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_add_to_navigation_notifications"
+            app:destination="@id/navigation_notifications" />
+        <action
+            android:id="@+id/action_navigation_add_to_navigation_cars"
+            app:destination="@id/navigation_cars" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="ps.aio.gazacars.ui.fragments.profile.ProfileFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/popularFragment"
+        android:name="ps.aio.gazacars.ui.fragments.more.MoreFragment"
+        android:label="Popular"
+        tools:layout="@layout/fragment_more">
+        <action
+            android:id="@+id/action_popularFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/latestFragment"
+        android:name="ps.aio.gazacars.ui.fragments.more.MoreFragment"
+        android:label="Latest"
+        tools:layout="@layout/fragment_more">
+        <action
+            android:id="@+id/action_popularFragment_to_navigation_home"
+            app:destination="@id/navigation_home"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/conFragment"
+        android:name="ps.aio.gazacars.ui.fragments.more.MoreFragment"
+        android:label="Contracted"
+        tools:layout="@layout/fragment_more">
+        <action
+            android:id="@+id/action_popularFragment_to_navigation_home"
+            app:destination="@id/navigation_home"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_about_us"
+        android:name="ps.aio.gazacars.ui.fragments.about.AboutUsFragment"
+        android:label="fragment_about_us"
+        tools:layout="@layout/fragment_about_us" />
+    <fragment
+        android:id="@+id/navigation_favourite"
+        android:name="ps.aio.gazacars.ui.fragments.favourite.FavouriteFragment"
+        android:label="@string/favourite"
+        tools:layout="@layout/favourite_fragment" />
+    <fragment
+        android:id="@+id/navigation_contact_us"
+        android:name="ps.aio.gazacars.ui.fragments.cotact_us.ContactUsFragment"
+        android:label="@string/contact_us"
+        tools:layout="@layout/fragment_contact_us"/>
+</navigation>

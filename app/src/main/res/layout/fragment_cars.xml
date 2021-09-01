@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="adapter"
+            type="ps.aio.gazacars.ui.adapters.AdapterMore" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.fragments.cars.CarsFragment">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_main"
+            android:layout_gravity="center_horizontal"
+            app:cardCornerRadius="20dp">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/my_gallery_tablayout"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_gravity="center"
+                android:importantForContentCapture="auto"
+                app:tabGravity="center"
+                app:tabInlineLabel="true"
+                app:tabIconTintMode="src_in"
+                app:tabIconTint="@android:color/darker_gray"
+                app:tabIndicatorGravity="stretch"
+                app:tabSelectedTextColor="@color/HeadTextWhite"
+                app:tabTextAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                app:tabTextColor="@color/grayStroke">
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/tab_my_sales"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:icon="@drawable/ic_corner_right_up"
+                    android:text="@string/my_sales" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/tab_my_purchases"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:icon="@drawable/ic_corner_right_down"
+                    android:text="@string/my_purchases" />
+            </com.google.android.material.tabs.TabLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/my_gallery_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:itemCount="20"
+            tools:listitem="@layout/item_car_for_gallery"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical"
+            app:adapter="@{adapter}"/>
+
+    </LinearLayout>
+</layout>

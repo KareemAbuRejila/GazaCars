@@ -1,0 +1,80 @@
+[
+  {
+    "notification_id": 1,
+    "notification_Title": "Posted New Sale for New Car",
+    "notification_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS7yFE16F9q0kJPEr2VrdOKDNsurrerPZuHBA&usqp=CAU",
+    "notification_time": "10"
+  },
+  {
+    "notification_id": 2,
+    "notification_Title": "Posted New Sale for New Car",
+    "notification_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS7yFE16F9q0kJPEr2VrdOKDNsurrerPZuHBA&usqp=CAU",
+    "notification_time": "120"
+  },
+  {
+    "notification_id": 3,
+    "notification_Title": "Posted New Sale for New Car",
+    "notification_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS7yFE16F9q0kJPEr2VrdOKDNsurrerPZuHBA&usqp=CAU",
+    "notification_time": "110"
+  },
+  {
+    "notification_id": 4,
+    "notification_Title": "Posted New Sale for New Car",
+    "notification_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS7yFE16F9q0kJPEr2VrdOKDNsurrerPZuHBA&usqp=CAU",
+    "notification_time": "20"
+  },
+  {
+    "notification_id": 5,
+    "notification_Title": "Posted New Sale for New Car",
+    "notification_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS7yFE16F9q0kJPEr2VrdOKDNsurrerPZuHBA&usqp=CAU",
+    "notification_time": "32"
+  },
+  {
+    "notification_id": 6,
+    "notification_Title": "Posted New Sale for New Car",
+    "notification_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS7yFE16F9q0kJPEr2VrdOKDNsurrerPZuHBA&usqp=CAU",
+    "notification_time": "345"
+  },
+  {
+    "notification_id": 7,
+    "notification_Title": "Posted New Sale for New Car",
+    "notification_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS7yFE16F9q0kJPEr2VrdOKDNsurrerPZuHBA&usqp=CAU",
+    "notification_time": "2"
+  },
+  {
+    "notification_id": 8,
+    "notification_Title": "Posted New Sale for New Car",
+    "notification_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS7yFE16F9q0kJPEr2VrdOKDNsurrerPZuHBA&usqp=CAU",
+    "notification_time": "4536"
+  },
+  {
+    "notification_id": 9,
+    "notification_Title": "Posted New Sale for New Car",
+    "notification_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS7yFE16F9q0kJPEr2VrdOKDNsurrerPZuHBA&usqp=CAU",
+    "notification_time": "22"
+  },
+  {
+    "notification_id": 10,
+    "notification_Title": "Posted New Sale for New Car",
+    "notification_image": "https://images.pexels.com/photos/2246284/pexels-photo-2246284.jpeg",
+    "notification_time": "43"
+  },
+  {
+    "notification_id": 11,
+    "notification_Title": "Posted New Sale for New Car",
+    "notification_image": "https://images.pexels.com/photos/2246284/pexels-photo-2246284.jpeg",
+    "notification_time": "125"
+  },
+  {
+    "notification_id": 12,
+    "notification_Title": "Posted New Sale for New Car",
+    "notification_image": "https://images.pexels.com/photos/2246284/pexels-photo-2246284.jpeg",
+    "notification_time": "56"
+  },
+  {
+    "notification_id": 13,
+    "notification_Title": "Posted New Sale for New Car",
+    "notification_image": "https://images.pexels.com/photos/2246284/pexels-photo-2246284.jpeg",
+    "notification_time": "76"
+  }
+]

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="adapter"
+            type="ps.aio.gazacars.ui.adapters.AdapterIntroViewPager2" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/car_images_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            />
+
+        <ImageView
+            android:id="@+id/car_images_close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="top|start"
+            android:src="@drawable/ic_baseline_close_24"
+            android:layout_margin="20dp" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/car_images_tabIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:tabBackground="@drawable/indicator_seletor"
+            app:tabIndicator="@android:color/transparent"
+            app:tabIndicatorFullWidth="false"
+            app:tabIndicatorGravity="bottom"
+            android:background="@android:color/transparent"
+            android:layout_gravity="bottom|center_horizontal" />
+
+    </FrameLayout>
+</layout>

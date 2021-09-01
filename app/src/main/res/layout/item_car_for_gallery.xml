@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="car"
+            type="ps.aio.gazacars.models.CarModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/rv_item_radius"
+        app:cardElevation="8dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:cardCornerRadius="@dimen/rv_item_radius"
+                app:layout_constraintDimensionRatio="w,5:3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/img_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:setImgUrl="@{car.urlImage}"
+                    tools:srcCompat="@tools:sample/backgrounds/scenic" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tv_brand"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:maxHeight="40dp"
+                android:maxEms="2"
+                android:maxLines="1"
+                android:text="@{car.brand}"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                android:textColor="@color/text1_color"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/cardView"
+                app:layout_constraintTop_toTopOf="@+id/cardView"
+                tools:text="@string/brand" />
+
+            <TextView
+                android:id="@+id/tv_dash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:maxLines="1"
+                android:text="@string/dash"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                android:textColor="@color/text2_color"
+                app:layout_constraintStart_toEndOf="@+id/tv_brand"
+                app:layout_constraintTop_toTopOf="@+id/cardView" />
+
+            <TextView
+                android:id="@+id/tv_model"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:maxHeight="40dp"
+                android:maxEms="2"
+                android:maxLines="1"
+                android:text="@{car.model}"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                android:textColor="@color/text2_color"
+                app:layout_constraintStart_toEndOf="@+id/tv_dash"
+                app:layout_constraintTop_toTopOf="@+id/cardView"
+                tools:text="@string/model" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:maxHeight="40dp"
+                android:maxEms="5"
+                android:maxLines="1"
+                android:text="@string/price"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                android:textColor="@color/HeadText"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_brand"
+                app:layout_constraintTop_toBottomOf="@+id/tv_brand" />
+
+            <TextView
+                android:id="@+id/tv_car_price"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:maxHeight="40dp"
+                android:maxEms="5"
+                android:maxLines="1"
+                android:text="@{car.price.toString()}"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                android:textColor="@color/text2_color"
+                app:layout_constraintStart_toEndOf="@+id/price"
+                app:layout_constraintTop_toTopOf="@+id/price"
+                tools:text="@string/price" />
+
+            <TextView
+                android:id="@+id/tv_car_year"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="2020" />
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/line_width"
+                android:layout_marginTop="10dp"
+                android:background="@color/grayStroke"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/price" />
+
+            <ImageView
+                android:id="@+id/auto"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toStartOf="@+id/ic_car"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line"
+                app:srcCompat="@drawable/ic_automatic" />
+
+            <TextView
+                android:id="@+id/tv_auto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="@{car.ger.toString()}"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/auto"
+                app:layout_constraintStart_toStartOf="@id/auto"
+                app:layout_constraintTop_toBottomOf="@id/auto"
+                tools:text="Automatic" />
+
+            <ImageView
+                android:id="@+id/ic_car"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                app:layout_constraintBottom_toBottomOf="@+id/auto"
+                app:layout_constraintEnd_toStartOf="@+id/dor"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/auto"
+                app:layout_constraintTop_toTopOf="@+id/auto"
+                app:srcCompat="@drawable/ic_icon_car" />
+            <TextView
+                android:id="@+id/tv_miles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="100 Mails"
+                android:text="@{car.mills.toString()}"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                app:layout_constraintTop_toBottomOf="@id/ic_car"
+                app:layout_constraintEnd_toEndOf="@id/ic_car"
+                app:layout_constraintStart_toStartOf="@id/ic_car"/>
+
+            <ImageView
+                android:id="@+id/dor"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                app:layout_constraintBottom_toBottomOf="@+id/ic_car"
+                app:layout_constraintEnd_toStartOf="@+id/cridt"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/ic_car"
+                app:layout_constraintTop_toTopOf="@+id/ic_car"
+                app:srcCompat="@drawable/ic_car_door" />
+            <TextView
+                android:id="@+id/tv_doors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="4 Doors"
+                android:text="@{car.trimType.toString()}"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                app:layout_constraintTop_toBottomOf="@id/dor"
+                app:layout_constraintEnd_toEndOf="@id/dor"
+                app:layout_constraintStart_toStartOf="@id/dor"/>
+
+            <ImageView
+                android:id="@+id/cridt"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                app:layout_constraintBottom_toBottomOf="@+id/dor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/dor"
+                app:layout_constraintTop_toTopOf="@+id/dor"
+                app:srcCompat="@drawable/ic_credit_card" />
+            <TextView
+                android:id="@+id/tv_cradit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="padid"
+                android:text="@{car.trimType.toString()}"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                app:layout_constraintTop_toBottomOf="@id/cridt"
+                app:layout_constraintEnd_toEndOf="@id/cridt"
+                app:layout_constraintStart_toStartOf="@id/cridt"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,129 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.GazaCars" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/color_Primary</item>
+        <item name="colorPrimaryVariant">@color/color_PrimaryVariant</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/color_Secondary</item>
+        <item name="colorSecondaryVariant">@color/color_SecondaryVariant</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowLightStatusBar">true</item>
+<!--        <item name="android:statusBarColor">@color/white</item>-->
+        <item name="android:textColor">@color/black</item>
+        <item name="fontFamily">@font/bien_normal</item>
+        <item name="android:windowTranslucentStatus">true</item>
+
+    </style>
+
+    <style name="Theme.GazaCars.SplashActivity">
+        <item name="android:windowBackground">@drawable/bg_splash_activity</item>
+    </style>
+
+    <style name="Theme.GazaCars.MainActivity">
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <!--        <item name="android:statusBarColor" tools:targetApi="l">@color/color_grad1_top</item>-->
+
+    </style>
+
+    <style name="Theme.GazaCars.IntroActivity">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+    </style>
+
+    //Car Details Theme
+    <style name="Theme.GazaCars.CarDetailsDialogTheme" parent="Theme.MaterialComponents.Light.DialogWhenLarge">
+        <item name="colorPrimary">@color/color_Primary</item>
+        <item name="colorPrimaryVariant">@color/color_PrimaryVariant</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/color_Secondary</item>
+        <item name="colorSecondaryVariant">@color/color_SecondaryVariant</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/Animation.Design.BottomSheetDialog</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:textColor">@color/HeadText</item>
+    </style>
+
+    <style name="Theme.GazaCars.FilterDialog" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="colorPrimary">@color/color_Primary</item>
+        <item name="colorPrimaryVariant">@color/color_PrimaryVariant</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#F44336</item>
+        <item name="colorSecondaryVariant">#F47067</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/Animation.Design.BottomSheetDialog</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:textColor">@color/HeadText</item>
+    </style>
+    //Rating Theme
+    <style name="ratingStyle" parent="Widget.AppCompat.RatingBar.Indicator">
+        <item name="colorControlActivated">#FFAA00</item>
+        <item name="colorAccent">#FF9900</item>
+        <item name="colorControlNormal">@android:color/darker_gray</item>
+    </style>
+
+
+    //Buttons Style
+
+    <style name="Theme.GazaCars.detail_theme" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="cornerRadius">@dimen/corners_main_button</item>
+        <item name="android:paddingTop">@dimen/paddingTopAndBottom_main_button</item>
+        <item name="android:paddingBottom">@dimen/paddingTopAndBottom_main_button</item>
+        <item name="android:paddingStart">@dimen/paddingStartAndEnd_main_button</item>
+        <item name="android:paddingEnd">@dimen/paddingStartAndEnd_main_button</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+    </style>
+
+    <style name="main_button_1" parent="Widget.MaterialComponents.Button">
+        <item name="cornerRadius">@dimen/corners_main_button</item>
+        <item name="android:paddingTop">@dimen/paddingTopAndBottom_main_button</item>
+        <item name="android:paddingBottom">@dimen/paddingTopAndBottom_main_button</item>
+        <item name="android:paddingStart">@dimen/paddingStartAndEnd_main_button</item>
+        <item name="android:paddingEnd">@dimen/paddingStartAndEnd_main_button</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+    </style>
+
+    <style name="main_button_2" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="cornerRadius">@dimen/corners_main_button</item>
+        <item name="android:paddingTop">@dimen/paddingTopAndBottom_main_button</item>
+        <item name="android:paddingBottom">@dimen/paddingTopAndBottom_main_button</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="strokeColor">@color/color_Primary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="main_editText" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxCornerRadiusBottomEnd">@dimen/corners_main_button</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/corners_main_button</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/corners_main_button</item>
+        <item name="boxCornerRadiusTopStart">@dimen/corners_main_button</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeColor">@color/grayStroke</item>
+        <item name="hintTextColor">@color/grayStroke</item>
+        <item name="boxBackgroundColor">@color/main_bg</item>
+    </style>
+
+    <style name="Theme.GazaCars.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.GazaCars.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.GazaCars.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>
